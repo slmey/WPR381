@@ -1,0 +1,98 @@
+body.dark-mode {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  header, footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 1em;
+    color: #90caf9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 960px;
+    margin: auto;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+  
+  h1, h2, h3 {
+    color: #bb86fc;
+  }
+  
+  .event {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+  }
+  
+  .event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  input, textarea {
+    padding: 0.75em;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+  }
+  
+  button {
+    padding: 0.75em;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3700b3;
+  }
+  
+  footer {
+    margin-top: 2em;
+  }
+  
+  .team-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .team-list li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #444;
+  }
