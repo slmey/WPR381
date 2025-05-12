@@ -1,1 +1,30 @@
-<h1>About Us</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Portal - About</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="dark-mode">
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/events">Events</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>About Us</h1>
+    <ul class="team-list">
+      <% teamInfo.forEach(member => { %>
+        <li><strong><%= member.name %></strong> - <%= member.role %></li>
+      <% }); %>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 Community Portal</p>
+  </footer>
+</body>
+</html>

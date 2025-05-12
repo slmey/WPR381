@@ -1,1 +1,35 @@
-<h1>Welcome to the Community Portal</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Portal - Home</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="dark-mode">
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/events">Events</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to Our Community Portal</h1>
+    <section>
+      <h2>Upcoming Events</h2>
+      <% events.forEach(event => { %>
+        <div class="event">
+          <img src="<%= event.image %>" alt="<%= event.title %>">
+          <h3><%= event.title %></h3>
+          <p><%= event.date %> @ <%= event.location %></p>
+        </div>
+      <% }); %>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Community Portal</p>
+  </footer>
+</body>
+</html>
