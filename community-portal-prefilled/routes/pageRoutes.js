@@ -5,7 +5,7 @@ const router = express.Router();
 
 var contacts = [];
 
-const teamInfo = [
+const team = [
     {name: 'Petri Loots', role: 'Team Leader, Backend Developer,', number: 1},
     {name: 'Jayden Crosson', role: 'Frontend Developer', number: 2},
     {name: 'Darrin Everette Mokuena', role: 'Data Manager', number: 3},
@@ -13,8 +13,11 @@ const teamInfo = [
 ];
 
 const events = [
-    {title: 'Community Cleanup', date: '2025-05-20', location: '', image: 'community-portal-prefilled/public/images/'},
-    {title: 'Food Drive', date: '2025-06-10', location: '', image: 'community-portal-prefilled/public/images/'}
+    {title: 'Charity Race', date: '2025-05-20', location: '', image: '/images/allwsbk.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'}
 ];
 
 const messages = []; 
