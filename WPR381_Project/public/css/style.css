@@ -160,6 +160,23 @@ body {
   margin: 0;
 }
 
+.event-detail-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.event-photo-large {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
 
 /*Home Page Grid*/
 .grid-container {
@@ -593,4 +610,61 @@ button[type="submit"]:hover {
 .alert.error {
     background-color: #f8d7da;
     color: #721c24;
+}
+
+.thank-you-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 20px;
+}
+
+.thank-you-card {
+  background-color: #fff;
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.thank-you-card h1 {
+  font-size: 2.5rem;
+  color: #f13535;
+  margin-bottom: 20px;
+}
+
+.thank-you-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.redirect-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.checkmark {
+  font-size: 4rem;
+  color: #32b027;
+  margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

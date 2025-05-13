@@ -13,13 +13,69 @@ const team = [
 ];
 
 const events = [
-    {title: 'Charity Race', date: '2025-05-24', location: '', image: '/images/allriders.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-8', location: 'Jerez', image: '/images/lean.jpg'},
-    {title: 'Championship Second Race', date: '2025-06-22', location: 'Mugello', image: '/images/bb33.jpg'},
-    {title: 'Championship Third Race', date: '2025-07-6', location: 'Sachsenring', image: '/images/jz brake.jpg'},
-    {title: 'Championship Final Race', date: '2025-07-13', location: 'Valencia', image: '/images/fq20.jpg'},
-    {title: 'Championship Celebration', date: '2025-07-14', location: 'Valencia', image: '/images/mm93 win.jpg'},
-    {title: 'Knee Down Meet Up', date: '2025-07-25', location: 'Termas de Rio Hondo', image: '/images/mm93wave.jpg'}
+  {
+    id: 1,
+    title: 'Charity Race',
+    date: '2025-05-24',
+    location: 'Valencia',
+    price: '00',
+    image: '/images/allriders.jpg',
+    description: 'Join us for a thrilling charity race in Valencia to raise funds and awareness for local communities.'
+  },
+  {
+    id: 2,
+    title: 'Championship Opening Race',
+    date: '2025-06-08',
+    location: 'Jerez',
+    price: '100',
+    image: '/images/lean.jpg',
+    description: 'The first official race of the championship season kicks off in Jerez. Expect fierce competition and blazing speed!'
+  },
+  {
+    id: 3,
+    title: 'Championship Second Race',
+    date: '2025-06-22',
+    location: 'Mugello',
+    price: '100',
+    image: '/images/bb33.jpg',
+    description: 'The action continues at Mugello. Who will climb the ranks and who will fall behind?'
+  },
+  {
+    id: 4,
+    title: 'Championship Third Race',
+    date: '2025-07-06',
+    location: 'Sachsenring',
+    price: '100',
+    image: '/images/jz brake.jpg',
+    description: 'Mid-season showdown at Sachsenring. Riders must stay sharp as the championship intensifies.'
+  },
+  {
+    id: 5,
+    title: 'Championship Final Race',
+    date: '2025-07-13',
+    location: 'Valencia',
+    price: '100',
+    image: '/images/fq20.jpg',
+    description: 'The grand finale of the season. Only one rider will claim the title in this ultimate test of speed and skill.'
+  },
+  {
+    id: 6,
+    title: 'Championship Celebration',
+    date: '2025-07-14',
+    location: 'Valencia',
+    price: '50',
+    image: '/images/mm93 win.jpg',
+    description: 'Celebrate the champions with live music, rider meet-and-greets, and unforgettable moments.'
+  },
+  {
+    id: 7,
+    title: 'Knee Down Meet Up',
+    date: '2025-07-25',
+    location: 'Termas de Rio Hondo',
+    price: '00',
+    image: '/images/mm93wave.jpg',
+    description: 'Join the Knee Down community for a casual ride, good vibes, and fresh tarmac in Termas.'
+  }
 ];
 
 const messages = []; 
@@ -37,6 +93,18 @@ router.get('/about', (req, res) => {
 // Events
 router.get('/events', (req, res) => {
   res.render('pages/events', { data: events, page: 'events' });
+});
+
+// Event Detail
+router.get('/events/:id', (req, res) => {
+  const eventId = parseInt(req.params.id);
+  const event = events.find(e => e.id === eventId);
+
+  if (event) {
+    res.render('pages/event-detail', { event, page: 'events' });
+  } else {
+    res.status(404).send('Event not found');
+  }
 });
 
 // Contact (GET)

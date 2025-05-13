@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="event-detail-container">
+  <h1><%= event.title %></h1>
+  <img src="<%= event.image %>" alt="<%= event.title %>" class="event-photo-large" />
+  <p><strong>Date:</strong> <%= event.date %></p>
+  <p><strong>Location:</strong> <%= event.location || 'TBA' %></p>
+  <p><strong>Description:</strong> <%= event.description || 'More details coming soon.' %></p>
+
+  <a href="/events" class="details-btn">← Back to Events</a>
+</div>
+
+<%- include('../partials/footer') %>
