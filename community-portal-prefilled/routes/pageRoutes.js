@@ -6,10 +6,10 @@ const router = express.Router();
 var contacts = [];
 
 const team = [
-    {name: 'Petri Loots', role: 'Team Leader, Backend Developer,', number: 1},
-    {name: 'Jayden Crosson', role: 'Frontend Developer', number: 2},
-    {name: 'Darrin Everette Mokuena', role: 'Data Manager', number: 3},
-    {name: 'Mihlaliyethu Diniso', role: 'Documentation Manager', number: 4}
+    {name: 'Petri Loots', role: 'Team Leader, Backend Developer,', number: 1, image: '/images/mm93lean.jpg'},
+    {name: 'Jayden Crosson', role: 'Frontend Developer', number: 2, image: '/images/fq20lean.jpg'},
+    {name: 'Darrin Everette Mokuena', role: 'Data Manager', number: 3, image: '/images/am73lean.jpg'},
+    {name: 'Mihlaliyethu Diniso', role: 'Documentation Manager', number: 4, image: '/images/jz5lean.jpg'}
 ];
 
 const events = [
