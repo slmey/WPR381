@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" href="/css/style.css">
-    <%- include('../partials/header') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="contact-body">
+
+    <!-- HEADER INCLUDE -->
+    <%- include('../partials/header') %>
+
+    <!-- VISIBLE PAGE HEADING -->
+    <section class="contact-header">
+        <h1 class="contact-title">Get in Touch</h1>
+    </section>
+
     <div class="contacts">
+        <form method="POST" action="/contact" onsubmit="return confirmSubmit();">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
 
-        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+            </fieldset>
 
-    <!--
-        Posts Contact Details to the backend to be displayed on the terminal    
-    -->
-    <form method="POST" action="/contact">
-        <fieldset>
-        <legend>Contact Information</legend>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        </fieldset>
-        <fieldset>
-        <legend>Message</legend>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        </fieldset>
-        <button type="submit">Send</button>
-    </form>
+            <fieldset>
+                <legend>Message</legend>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required></textarea>
+            </fieldset>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
+    <!-- FOOTER INCLUDE -->
     <%- include('../partials/footer') %>
+
+    <!-- Optional JS confirmation -->
+    <script>
+        function confirmSubmit() {
+            return confirm("Are you sure you want to send this message?");
+        }
+    </script>
+
 </body>
 </html>
