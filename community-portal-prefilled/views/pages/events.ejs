@@ -1,39 +1,36 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="public/css/style.css">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Portal - Events</title>
-  <link rel="stylesheet" href="/styles/style.css">
+    <meta charset="UTF-8">
+    <title>Events</title>
 </head>
-<body class="dark-mode">
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/events">Events</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <h1>All Events</h1>
-    <section>
-        <h2>All Events</h2>
-        <% if (events && events.length > 0) { %>
-        <% events.forEach(event => { %>
-            <div class="event">
-            <img src="<%= event.image %>" alt="<%= event.title %>">
-            <h3><%= event.title %></h3>
-            <p><%= event.date %> @ <%= event.location %></p>
+<body>
+    <section class="events-section">
+
+    <!-- Renders the Event details -->
+    <% data.forEach(event => { %>
+
+            <!-- 
+                To properly work with existing CSS code, the certain element class names and id's are
+                also provided from the backend
+            -->
+            <div class="<%=event.class%>" id="<%=event.id%>">
+                <img src="<%=event.image%>" alt="<%=event.alt%>">
+                <div class="event-info">
+                    <h2><%=event.title%></h2>
+                    <p><%=event.participant%> Participants</p>
+                    <p>$<%=event.price%> per Ticket</p>
+                    <a href="#" class="details-btn">View Details</a>
+                </div>
             </div>
-        <% }); %>
-        <% } else { %>
-        <p>No events available right now.</p>
-        <% } %>
+
+    <% }) %>
+
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Community Portal</p>
-  </footer>
+
 </body>
+<%- include('../partials/footer') %>
 </html>

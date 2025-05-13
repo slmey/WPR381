@@ -3,11 +3,13 @@
 const express = require('express');
 const router = express.Router();
 
+var contacts = [];
+
 const teamInfo = [
-    {name: 'Petri Loots', role: 'Team Leader, Backend Developer'},
-    {name: 'Jayden Crosson', role: 'Frontend Developer'},
-    {name: 'Darrin Everette Mokuena', role: 'Data Manager'},
-    {name: 'Mihlaliyethu Diniso', role: 'Documentation Manager'}
+    {name: 'Petri Loots', role: 'Team Leader, Backend Developer,', number: 1},
+    {name: 'Jayden Crosson', role: 'Frontend Developer', number: 2},
+    {name: 'Darrin Everette Mokuena', role: 'Data Manager', number: 3},
+    {name: 'Mihlaliyethu Diniso', role: 'Documentation Manager', number: 4}
 ];
 
 const events = [
@@ -17,28 +19,27 @@ const events = [
 
 const messages = []; 
 
-//home
+// Home
 router.get('/', (req, res) => {
-  res.render('home', { events });
+  res.render('./pages/home', { page: 'home' });
 });
 
-
-//about
+// About
 router.get('/about', (req, res) => {
-  res.render('about', { teamInfo });
+  res.render('pages/about', { data: team, page: 'about' });
 });
 
-//events
+// Events
 router.get('/events', (req, res) => {
-  res.render('events', { events });
+  res.render('pages/events', { data: events, page: 'events' });
 });
 
-//contact (get)
+// Contact (GET)
 router.get('/contact', (req, res) => {
-  res.render('contact');
+  res.render('pages/contact', { page: 'contact' });
 });
 
-//contact (post)
+// Contact (POST)
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   
@@ -66,9 +67,10 @@ router.post('/contact', (req, res) => {
   }
 });
 
-//thank you 
-router.get('/thank-you', (req, res) => {
-  res.render('thankyou');
+// Thank You
+
+ router.get('/thankyou', (req, res) => {
+  res.render('pages/thankyou', { page: '' });
 });
 
 module.exports = router;
