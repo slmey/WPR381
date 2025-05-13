@@ -13,11 +13,13 @@ const team = [
 ];
 
 const events = [
-    {title: 'Charity Race', date: '2025-05-20', location: '', image: '/images/allwsbk.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-10', location: '', image: '/images/all riders.jpg'}
+    {title: 'Charity Race', date: '2025-05-24', location: '', image: '/images/allwsbk.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-8', location: 'Jerez', image: '/images/all riders.jpg'},
+    {title: 'Championship Second Race', date: '2025-06-22', location: 'Mugello', image: '/images/bb33.jpg'},
+    {title: 'Championship Third Race', date: '2025-07-6', location: 'Sachsenring', image: '/images/jz brake.jpg'},
+    {title: 'Championship Final Race', date: '2025-07-13', location: 'Valencia', image: '/images/fq20.jpg'},
+    {title: 'Championship Celebration', date: '2025-07-14', location: 'Valencia', image: '/images/mm93 win.jpg'},
+    {title: 'Knee Down Meet Up', date: '2025-07-25', location: 'Termas de Rio Hondo', image: '/images/ba 1.jpg'}
 ];
 
 const messages = []; 

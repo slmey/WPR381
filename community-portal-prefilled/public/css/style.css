@@ -27,7 +27,7 @@ body {
 .main-title {
   position: relative;
   height: 100vh;
-  background-image: url('images/your-background.jpg');
+  background-image: url('images/jr 65.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -161,144 +161,34 @@ body {
 
 
 /*Home Page Grid*/
-  .grid-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-areas: 'row11 row11 row13 row14 row14'
-                        'row21 row21 row22 row22 row24'
-                        'row31 row32 row32 row33 row33';
-  }
-.grid-container a{
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container a {
+  display: block;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  font-size: 18px;
   text-decoration: none;
-  color: White;
-}
-#contact{
-  color: black;
-}
-.grid-item1{
-    grid-area: row11;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #111;
-    text-align: center;
-    padding: 180px;
-    color: #fff;
-    font-weight: bolder;
-    font-size: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
 }
 
-.grid-item2{
-    grid-area: row12;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    font-size: 20px;
-    font-weight: bolder;
+.grid-container a:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
 }
-
-.grid-item3{
-    grid-area: row13;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    background-image: url('/images/diagonal-lines.jpg');
-}
-
-.grid-item4{
-    grid-area: row14;
-    text-align: center;
-    background-image: url('/images/pexels-georgesultan-11876706.jpg');
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.grid-item5{
-    grid-area: row21;
-    background-color: #fff;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.grid-item6{
-    grid-area: row22;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    font-size: 20px;
-    font-weight: bolder;
-    background-image: url('/images/events.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#events{
-  background-color: #000000d0;
-  padding-left: 50%;
-  padding-right: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.grid-item11{
-    grid-area: row24;
-    background-image: url('/images/535820fc1f9b787041dc0dcc329f8b9b.jpg');
-    background-size: 700px 1000px;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
-
-.grid-item7{
-    grid-area: row31;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    background-image: url('/images/checkered-flag-background-vector.jpg');
-    background-size: 527px;
-}
-
-.grid-item8{
-    grid-area: row32;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-.grid-item9{
-    grid-area: row33;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    background-image: url('/images/checkered-flag-background-vector.jpg');
-    background-size: 527px;
-}
-.grid-item:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
 
 /* Footer */
 .site-footer {
