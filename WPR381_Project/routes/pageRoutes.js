@@ -19,7 +19,7 @@ const events = [
     {title: 'Championship Third Race', date: '2025-07-6', location: 'Sachsenring', image: '/images/jz brake.jpg'},
     {title: 'Championship Final Race', date: '2025-07-13', location: 'Valencia', image: '/images/fq20.jpg'},
     {title: 'Championship Celebration', date: '2025-07-14', location: 'Valencia', image: '/images/mm93 win.jpg'},
-    {title: 'Knee Down Meet Up', date: '2025-07-25', location: 'Termas de Rio Hondo', image: '/images/ba 1.jpg'}
+    {title: 'Knee Down Meet Up', date: '2025-07-25', location: 'Termas de Rio Hondo', image: '/images/mm93wave.jpg'}
 ];
 
 const messages = []; 
