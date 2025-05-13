@@ -13,8 +13,8 @@ const team = [
 ];
 
 const events = [
-    {title: 'Charity Race', date: '2025-05-24', location: '', image: '/images/allwsbk.jpg'},
-    {title: 'Championship Opening Race', date: '2025-06-8', location: 'Jerez', image: '/images/allriders.jpg'},
+    {title: 'Charity Race', date: '2025-05-24', location: '', image: '/images/allriders.jpg'},
+    {title: 'Championship Opening Race', date: '2025-06-8', location: 'Jerez', image: '/images/lean.jpg'},
     {title: 'Championship Second Race', date: '2025-06-22', location: 'Mugello', image: '/images/bb33.jpg'},
     {title: 'Championship Third Race', date: '2025-07-6', location: 'Sachsenring', image: '/images/jz brake.jpg'},
     {title: 'Championship Final Race', date: '2025-07-13', location: 'Valencia', image: '/images/fq20.jpg'},
